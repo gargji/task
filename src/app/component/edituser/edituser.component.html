@@ -1,0 +1,31 @@
+
+<!-- <p>contact works!</p> -->
+<section class="cmspage mtb-40">
+    <div class="container">
+      <div class="page-desc">
+        <div class="row justify-content-center">
+          <div class="col-md-8 photo">
+            <h1 class="text-center">Contact</h1>
+            <form [formGroup]="form" (ngSubmit)="update()">
+              <div class="form-group">
+                <input type="text" formControlName="firstName" class="form-control" placeholder="firstName">
+              </div>
+              <div class="form-group">
+                <input type="text" formControlName="lastName" class="form-control" placeholder="lastName">
+              </div>
+              <div class="form-group">
+                <input type="text" formControlName="maidenName" class="form-control" placeholder="maidenName">
+              </div>
+              <div class="form-group">
+                <input type="number" formControlName="age"  class="form-control" placeholder="AGE">
+              </div>
+              <div class="form-group text-center">
+                <button class="btn btn-primary " type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

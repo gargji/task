@@ -1,0 +1,50 @@
+ <!-- <p>display works!</p> -->
+ <section class="dashboard-wrap mtb-40">
+    <div class="container">
+        <div class="body-content">
+            <div class="row">
+              
+                <div class="col">
+                    <div class="dash-right">
+                        <div class="dash-header">
+                            <div class="dash-title">
+                                <h1>getalldata</h1>
+                            </div>
+                            <div class="dash-nav">
+                                <a routerLink="/createuser" class="btn btn-success">Add user</a>
+                            </div>
+                        </div>
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th>ID</th>
+                                <th>firstname</th>
+                                <th>lastname</th>
+                                <th>maidenName</th>
+                                <th>age</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr *ngFor="let d of data"> 
+
+                                <td>{{d.id}}</td>
+                                <!-- <td><img src={{d.image.url}} ></td> -->
+                                <td>{{d.firstName}}</td>
+                                <td>{{d.lastName}}</td>
+                                <td>{{d.maidenName}}</td>
+                                <td>{{d.age}}</td>
+                                <!-- <td>October 22, 2018</td> -->
+                                <td>
+                                    <!-- json ki api ke liye id  or image ke saath kuch ni-->
+                                    <!-- express ki ke liye _id -->
+                                    <a  [routerLink]="['/edituser/',d.id]" class="btn btn-info btn-sm">Edit</a>
+
+                                </td>
+                          
+                        </table>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
